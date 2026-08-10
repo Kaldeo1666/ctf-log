@@ -28,6 +28,17 @@ async function init() {
   });
 }
 
+// Format a Date using its LOCAL calendar date (not UTC) as YYYY-MM-DD.
+// Using toISOString() here would silently shift the date for anyone
+// not in the UTC timezone (e.g. it can show "yesterday" for most of
+// the day in timezones ahead of UTC, like IST).
+function localDateKey(d) {
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${y}-${m}-${day}`;
+}
+
 // ---------- Heatmap (GitHub-style, ~18 weeks) ----------
 function renderHeatmap(entries) {
   const counts = {};
@@ -40,7 +51,7 @@ function renderHeatmap(entries) {
   for (let i = days - 1; i >= 0; i--) {
     const d = new Date(today);
     d.setDate(d.getDate() - i);
-    const key = d.toISOString().slice(0, 10);
+    const key = localDateKey(d);
     const c = counts[key] || 0;
     let level = 0;
     if (c === 1) level = 1;
@@ -74,10 +85,10 @@ function renderStatusbar(entries) {
   let cursor = new Date();
   cursor.setHours(0, 0, 0, 0);
   // allow streak to still "count" if today has no entry yet but yesterday did
-  if (!dateSet.has(cursor.toISOString().slice(0, 10))) {
+  if (!dateSet.has(localDateKey(cursor))) {
     cursor.setDate(cursor.getDate() - 1);
   }
-  while (dateSet.has(cursor.toISOString().slice(0, 10))) {
+  while (dateSet.has(localDateKey(cursor))) {
     streak++;
     cursor.setDate(cursor.getDate() - 1);
   }
