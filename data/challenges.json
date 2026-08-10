@@ -11,6 +11,27 @@
     "Mobile",
     "Misc"
   ],
-  "difficulties": ["Easy", "Medium", "Hard"],
-  "entries": []
+  "difficulties": [
+    "Easy",
+    "Medium",
+    "Hard"
+  ],
+  "entries": [
+    {
+      "id": "08/10/2026-test-01",
+      "date": "08/10/2026",
+      "title": "Test 01",
+      "domain": "Misc",
+      "difficulty": "Easy",
+      "event": "CyLab",
+      "summary": "just a test case it is",
+      "learnings": "fcvbjsuygvdbnjchb nmj\nddsdfvfdsdv",
+      "tools": [
+        "cmd",
+        "claude",
+        "github"
+      ],
+      "writeup_url": "https://github.com/Kaldeo1666/mini-siem-dashboard"
+    }
+  ]
 }
