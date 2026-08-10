@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ctf-log</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <div class="prompt-bar">
+    <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+    <span>~/ctf-log — zsh</span>
+  </div>
+
+  <div class="header">
+    <h1>$ ctf-log<span class="cursor"></span></h1>
+    <p class="subtitle">A daily record of challenges solved, techniques learned, and mistakes made. Updated after every session — view only, edited by one person via git.</p>
+  </div>
+
+  <div class="heatmap-section">
+    <p class="heatmap-title">// activity — last 18 weeks</p>
+    <div class="heatmap-grid" id="heatmap"></div>
+    <div class="statusbar" id="statusbar"></div>
+  </div>
+
+  <div class="controls">
+    <div class="filter-row">
+      <span class="filter-label">domain</span>
+      <div id="domain-filters" class="filter-row"></div>
+    </div>
+    <div class="filter-row">
+      <span class="filter-label">difficulty</span>
+      <div id="difficulty-filters" class="filter-row"></div>
+    </div>
+    <input id="search" class="search-input" type="text" placeholder="grep title, summary, tools...">
+  </div>
+
+  <div class="entries" id="entries"></div>
+
+  <footer>rendered from data/challenges.json — read-only</footer>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
