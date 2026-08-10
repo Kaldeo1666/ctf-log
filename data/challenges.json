@@ -12,54 +12,5 @@
     "Misc"
   ],
   "difficulties": ["Easy", "Medium", "Hard"],
-  "entries": [
-    {
-      "id": "20260803-jwt-none-alg",
-      "date": "2026-08-03",
-      "title": "JWT alg:none Bypass",
-      "domain": "Web",
-      "difficulty": "Easy",
-      "event": "picoCTF Practice",
-      "summary": "Forged an admin session by switching the JWT header alg to none and stripping the signature.",
-      "learnings": "Servers that blindly trust the alg field will accept unsigned tokens. Always check what libraries do when alg is set to none before trusting JWT validation. jwt_tool automates this with the -X a flag.",
-      "tools": ["jwt_tool", "Burp Suite", "CyberChef"],
-      "writeup_url": ""
-    },
-    {
-      "id": "20260805-rsa-common-modulus",
-      "date": "2026-08-05",
-      "title": "RSA Common Modulus Attack",
-      "domain": "Crypto",
-      "difficulty": "Medium",
-      "event": "picoCTF Practice",
-      "summary": "Two ciphertexts encrypted under the same modulus N with different public exponents let me recover the plaintext without factoring N.",
-      "learnings": "If gcd(e1, e2) = 1, the plaintext can be recovered via the extended Euclidean algorithm using m = c1^a * c2^b mod N. Reusing a modulus across keys is a critical RSA misconfiguration. Wrote a small Python + sympy script to automate this.",
-      "tools": ["Python", "sympy", "pwntools"],
-      "writeup_url": ""
-    },
-    {
-      "id": "20260807-format-string-leak",
-      "date": "2026-08-07",
-      "title": "Format String Leak to Bypass ASLR",
-      "domain": "Pwn",
-      "difficulty": "Hard",
-      "event": "HackTheBox",
-      "summary": "Leaked a libc address through a printf format string bug, calculated the base, then built a ROP chain for a shell.",
-      "learnings": "Format string bugs are goldmines for info leaks even without direct write primitives. Used %p chains to walk the stack, matched the offset to a known libc address, then used one_gadget to find a shell-spawning offset once the base was known.",
-      "tools": ["pwntools", "gdb-peda", "one_gadget", "ROPgadget"],
-      "writeup_url": ""
-    },
-    {
-      "id": "20260809-metadata-geolocation",
-      "date": "2026-08-09",
-      "title": "Geolocating a Photo from Shadows and Signage",
-      "domain": "OSINT",
-      "difficulty": "Medium",
-      "event": "TraceLabs Practice",
-      "summary": "Located the exact intersection in a stripped-metadata photo using shadow angle estimation and a partially visible storefront sign.",
-      "learnings": "When EXIF data is scrubbed, shadows still encode time and latitude info (SunCalc helped narrow the capture window). Cross-referencing partial signage text with Google Maps Street View search closed the gap. Reverse image search alone was not enough here.",
-      "tools": ["SunCalc", "Google Earth", "Yandex Images", "Street View"],
-      "writeup_url": ""
-    }
-  ]
+  "entries": []
 }
