@@ -18,8 +18,8 @@
   ],
   "entries": [
     {
-      "id": "08/10/2026-test-01",
-      "date": "08/10/2026",
+      "id" : "2026-08-10-test-01",
+      "date": "2026-08-10",
       "title": "Test 01",
       "domain": "Misc",
       "difficulty": "Easy",
