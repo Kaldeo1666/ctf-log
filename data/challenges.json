@@ -17,5 +17,18 @@
     "Medium",
     "Hard"
   ],
-  "entries": []
+  "entries": [
+    {
+      "id": "20260815-trust-but-verify",
+      "date": "2026-08-15",
+      "title": "Trust But Verify",
+      "domain": "Artificial Intelligence",
+      "difficulty": "Easy",
+      "event": "cylab",
+      "summary": "Nothing serious, only reading chat transcript of a human and ai assistant",
+      "learnings": "Always verify before simply copying info from ai",
+      "tools": [],
+      "writeup_url": "https://learn.cylabacademy.org/library/783?page=1"
+    }
+  ]
 }
