@@ -29,6 +29,21 @@
       "learnings": "Always verify before simply copying info from ai",
       "tools": [],
       "writeup_url": "https://learn.cylabacademy.org/library/783?page=1"
+    },
+    {
+      "id": "20260816-flag-hunters",
+      "date": "2026-08-16",
+      "title": "Flag Hunters",
+      "domain": "Reverse Engineering",
+      "difficulty": "Medium",
+      "event": "CyLab",
+      "summary": "Source code → find unsanitized input → inject `;RETURN 0` → hijack control flow → jump to the beginning → print the hidden flag",
+      "learnings": "If a program lets the user control input, check whether that input can change the program's execution flow\nMake the program execute something the programmer did not expect",
+      "tools": [
+        "python",
+        "netcat"
+      ],
+      "writeup_url": "https://learn.cylabacademy.org/library/472?page=1&category=3&workspace=true"
     }
   ]
 }
