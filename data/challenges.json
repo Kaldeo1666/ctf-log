@@ -44,6 +44,18 @@
         "netcat"
       ],
       "writeup_url": "https://learn.cylabacademy.org/library/472?page=1&category=3&workspace=true"
+    },
+    {
+      "id": "20260817-vault-door-training",
+      "date": "2026-08-17",
+      "title": "vault-door-training",
+      "domain": "Reverse Engineering",
+      "difficulty": "Easy",
+      "event": "CyLab",
+      "summary": "just read the java file via - cat function",
+      "learnings": "windows powershell isnt case sensitive but linux and ctf flags are case sensitive",
+      "tools": [],
+      "writeup_url": "https://learn.cylabacademy.org/library/7?page=1&category=3&workspace=true"
     }
   ]
 }
